@@ -1,0 +1,40 @@
+# Tutorial link: https://www.baeldung.com/jlink
+#Compile module
+ # 498  javac -d mods --module-source-path src/ --module com.javapoint
+ # 500  java --module-path mods/ --module com.javapoint/com.javapoint.Hello
+ # 502  tree /f
+ # 503  javap mods/com.javapoint/module-info.class
+
+#jlink
+ # 508  jdeps --module-path mods/ -s --module com.javapoint
+ # 509  jlink --module-path "%JAVA_HOME%\jmods";mods --add-modules com.javapoint --output customjre
+ # 512  cd customjre/
+ # 513  cd bin/
+ # 514  java --module com.javapoint/com.javapoint.Hello
+ # 515  jlink --launcher customjrelauncher=com.javapoint/com.javapoint.Hello --module-path "%JAVA_HOME%\jmods";mods --add-modules com.javapoint --output customjre
+
+
+
+
+
+Folder PATH listing
+Volume serial number is 07E7-1A32
+E:.
+│   tree.txt
+│   
+├───mods
+│   └───com.javapoint
+│       │   module-info.class
+│       │   
+│       └───com
+│           └───javapoint
+│                   Hello.class
+│                   
+└───src
+    └───com.javapoint
+        │   module-info.java
+        │   
+        └───com
+            └───javapoint
+                    Hello.java
+                    
