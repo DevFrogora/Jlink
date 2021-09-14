@@ -1,0 +1,28 @@
+Folder PATH listing
+Volume serial number is 07E7-1A32
+E:.
+│   cmd.txt
+│   
+├───mods
+│   └───demoModule
+│       │   module-info.class
+│       │   
+│       └───com
+│           └───javapoint
+│                   Hello.class
+│                   
+└───src
+    └───demoModule
+        │   module-info.java
+        │   
+        └───com
+            └───javapoint
+                    Hello.java
+                    
+# javac -d mods --module-source-path src/ --module demoModule
+
+# java --module-path mods/ --module demoModule/com.javapoint.Hello
+Jlink Demo
+
+# jlink --module-path "%JAVA_HOME%\jmods";mods --add-modules demoModule --output customjre
+# jpackage --name myapp --module-path mods -m demoModule/com.javapoint.Hello
