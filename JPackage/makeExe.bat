@@ -11,7 +11,7 @@ jpackage --verbose ^
 --name myapp ^
 --module-path mods ^
 -m demoModule/com.javapoint.Hello ^
---app-version 6.10 ^
+--app-version 0.1 ^
 --win-dir-chooser ^
 --vendor Frogora ^
 --copyright "Copyright 2020 FrogoraTheHacker Ltd, Pluto" ^
