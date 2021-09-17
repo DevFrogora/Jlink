@@ -1,0 +1,5 @@
+Splash Not working: 
+Question what exactly $APPDIR is pointing too?
+Ans: https://docs.oracle.com/en/java/javase/14/jpackage/support-application-features.html#GUID-34C3BE72-CDE5-469B-BC4D-3D9A6DD2AEEA
+Eg: 
+https://github.com/beryx/badass-jlink-plugin/issues/97

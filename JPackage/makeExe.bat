@@ -7,7 +7,8 @@
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-jpackage --name myapp ^
+jpackage --verbose ^
+--name myapp ^
 --module-path mods ^
 -m demoModule/com.javapoint.Hello ^
 --app-version 6.10 ^
@@ -18,5 +19,10 @@ jpackage --name myapp ^
 --win-menu ^
 --win-shortcut ^
 --win-menu-group myappgroup ^
---win-console 
+--win-console ^
+--icon "%~dp0icon.ico" ^
+--resource-dir tempResourceDir ^
+--java-options '-splash:$APPDIR\splash.gif'
+
 pause
+:: --resource-dir tempResourceDir 
